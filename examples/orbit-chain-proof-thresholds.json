@@ -1,0 +1,17 @@
+{
+  "repo": "orbit-chain-proof-stack",
+  "thresholds": {
+    "signal": 2,
+    "slack": 2,
+    "confidence": 1,
+    "drag": 2,
+    "ship": 204,
+    "watch": 99
+  },
+  "terms": [
+    "event finality",
+    "nonce pressure",
+    "settlement risk",
+    "proof depth"
+  ]
+}
