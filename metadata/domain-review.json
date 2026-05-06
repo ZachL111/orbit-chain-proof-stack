@@ -1,0 +1,73 @@
+{
+  "repo": "orbit-chain-proof-stack",
+  "language": "C",
+  "category": "Blockchain tooling",
+  "goal": "Implement a C blockchain tooling project for proof policy evaluation, using deny and allow fixtures and explainable decision traces.",
+  "review_model": {
+    "terms": [
+      "event finality",
+      "nonce pressure",
+      "settlement risk",
+      "proof depth"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "event finality",
+      "signal": 44,
+      "slack": 46,
+      "drag": 29,
+      "confidence": 50,
+      "score": 97,
+      "lane": "hold"
+    },
+    {
+      "name": "stress",
+      "focus": "nonce pressure",
+      "signal": 43,
+      "slack": 47,
+      "drag": 19,
+      "confidence": 58,
+      "score": 134,
+      "lane": "watch"
+    },
+    {
+      "name": "edge",
+      "focus": "settlement risk",
+      "signal": 51,
+      "slack": 39,
+      "drag": 11,
+      "confidence": 73,
+      "score": 181,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "proof depth",
+      "signal": 59,
+      "slack": 27,
+      "drag": 30,
+      "confidence": 77,
+      "score": 132,
+      "lane": "watch"
+    },
+    {
+      "name": "stale",
+      "focus": "event finality",
+      "signal": 58,
+      "slack": 29,
+      "drag": 25,
+      "confidence": 90,
+      "score": 160,
+      "lane": "ship"
+    }
+  ]
+}
